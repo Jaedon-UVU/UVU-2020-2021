@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contacts</title>
+    <link rel="stylesheet" href="css/site.css">
+    <script src="scripts/Model.js" type="text/javascript"></script>
+    <script src="scripts/Controller.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="contactEditArea">
+        <form name="contactEditForm">
+            <h1 id="formTitle">Edit Contact</h1>
+            <label for="nameEdit">
+                     Name:<br>
+                    <input type="text" name="name" id="nameEdit" />
+                </label>
+            <div id="nameError" class="validationError"></div>
+
+            <label for="phoneNumberEdit">
+                    Phone number<br>
+                    <input type="text" name="phoneNumber" id="phoneNumberEdit" />
+                    <select name="phoneNumberType" id="phoneNumberTypeSelect">
+                        <option value="0">Mobile</option>
+                        <option value="1">Home</option>
+                        <option value="2">Work</option>
+                    </select>
+                </label>
+            <div id="phoneNumberError" class="validationError"></div>
+
+            <label for="ageEdit">
+                    Age:<br>
+                    <input type="text" name="ageEdit", id="ageEdit" />
+                </label>
+            <div id="ageError" class="validationError"></div>
+
+            <fieldset>
+                <legend>Ringtone:</legend>
+                <label for="ringtoneRadio0"><input type="radio" name="ringtoneRadio" id="ringtoneRadio0" value="0"/>None</label><br/>
+                <label for="ringtoneRadio1"><input type="radio" name="ringtoneRadio" id="ringtoneRadio1" value="1"/>Hangin' With my Homies</label><br/>
+                <label for="ringtoneRadio2"><input type="radio" name="ringtoneRadio" id="ringtoneRadio2" value="2"/>Table for Two</label><br/>
+                <label for="ringtoneRadio3"><input type="radio" name="ringtoneRadio" id="ringtoneRadio3" value="3"/>Game On</label><br/>
+                <label for="ringtoneRadio4"><input type="radio" name="ringtoneRadio" id="ringtoneRadio4" value="4"/>Besties Forever</label><br/>
+                <label for="ringtoneRadio5"><input type="radio" name="ringtoneRadio" id="ringtoneRadio5" value="5"/>Ritmo Latino</label><br/>
+            </fieldset>
+            <button type="button" id="saveBtn">Save</button>
+            <button type="button" id="cancelBtn">Cancel</button>
+        </form>
+    </div>
+
+    <div id="contactsListArea">
+        <h1>My Contacts</h1>
+        <button type="button" id="newBtn">New Contact</button>
+        <table id='contactsTable'>
+            <thead>
+                <th>Name</th>
+                <th>Number</th>
+                <th>&nbsp;</th>
+            </thead>
+        </table>
+    </div>
+
+    <script>
+        onPageLoad();
+    </script>
+</body>
+
+</html>

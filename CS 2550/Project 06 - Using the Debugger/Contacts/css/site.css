@@ -1,0 +1,12 @@
+  .validationError {
+      height: 26px;
+      color: red;
+  }
+  
+  #contactEditArea {
+      display: none;
+  }
+  
+  #contactsListArea {
+      display: none;
+  }
